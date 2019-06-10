@@ -9,9 +9,9 @@ namespace ABCRestaurantDataLayer.Repository
 {
     public class UserRepository : IUserRepository
     {
-        private readonly DBConn  _Dbcontext;
+        private readonly RestaurantDBContext  _Dbcontext;
 
-        public UserRepository(DBConn dBConn)
+        public UserRepository(RestaurantDBContext dBConn)
         {
             this._Dbcontext = dBConn;
         }

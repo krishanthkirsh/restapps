@@ -7,10 +7,10 @@ using System.Linq;
 
 namespace ABCRestaurantDataLayer.Repository
 {
-    class MenuRepository : IMenuRepository
+    public class MenuRepository : IMenuRepository
     {
-        private DBConn _dBConn;
-        public MenuRepository(DBConn dBConn)
+        private RestaurantDBContext _dBConn;
+        public MenuRepository(RestaurantDBContext dBConn)
         {
             this._dBConn = dBConn;
         }

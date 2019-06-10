@@ -9,9 +9,9 @@ namespace ABCRestaurantDataLayer.Repository
 {
     public class OrderRepository : IOrderRepository
     {
-        private DBConn _dBConn;
+        private RestaurantDBContext _dBConn;
 
-        public OrderRepository(DBConn dBConn)
+        public OrderRepository(RestaurantDBContext dBConn)
         {
             this._dBConn = dBConn;
         }

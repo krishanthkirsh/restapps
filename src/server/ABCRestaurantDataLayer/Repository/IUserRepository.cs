@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ABCRestaurantDataLayer.Repository
 {
-    interface IUserRepository
+    public interface IUserRepository
     {
         void AddUser(User user);
         IEnumerable<User> GetUsers();

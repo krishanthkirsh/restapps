@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ABCRestaurantDataLayer.Repository;
 
 namespace ABCResturantWebApi
 {
@@ -34,9 +35,12 @@ namespace ABCResturantWebApi
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddDbContext<RestaurantDBContext>(item =>
+                item.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+                );
+            
+            services.AddScoped<IMenuRepository, MenuRepository>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddDbContext<DBConn>(item => item.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
 
 
