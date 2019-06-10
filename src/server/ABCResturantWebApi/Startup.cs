@@ -40,6 +40,8 @@ namespace ABCResturantWebApi
                 );
             
             services.AddScoped<IMenuRepository, MenuRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IOrderRepository,OrderRepository>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
 
