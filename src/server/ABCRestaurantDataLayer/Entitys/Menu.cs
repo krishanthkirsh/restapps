@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace ABCRestaurantDataLayer.Entitys
+namespace ABCRestaurant_Data.Entitys
 {
-    public class Menu
+    public class Menu :IEntity
     {
         [Key]
         public int MenuID { get; set; }

@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ABCRestaurantDataLayer\ABCRestaurantDataLayer.csproj" />
+    <ProjectReference Include="..\ABCRestaurantDataLayer\ABCRestaurant_Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ABCRestaurantDataLayer.DBConnection;
-using ABCRestaurantDataLayer.Entitys;
+using ABCRestaurant_Data.DBConnection;
+using ABCRestaurant_Data.Entitys;
 
-namespace ABCRestaurantDataLayer.Repository
+namespace ABCRestaurant_Data.Repository
 {
     public class OrderRepository : IOrderRepository
     {

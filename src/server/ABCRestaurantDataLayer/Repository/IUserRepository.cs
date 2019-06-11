@@ -1,9 +1,9 @@
-﻿using ABCRestaurantDataLayer.Entitys;
+﻿using ABCRestaurant_Data.Entitys;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ABCRestaurantDataLayer.Repository
+namespace ABCRestaurant_Data.Repository
 {
     public interface IUserRepository
     {

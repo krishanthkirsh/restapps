@@ -1,7 +1,7 @@
-﻿using ABCRestaurantDataLayer.Entitys;
+﻿using ABCRestaurant_Data.Entitys;
 using Microsoft.EntityFrameworkCore;
 
-namespace ABCRestaurantDataLayer.DBConnection
+namespace ABCRestaurant_Data.DBConnection
 {
     public class RestaurantDBContext : DbContext
     {
@@ -13,9 +13,9 @@ namespace ABCRestaurantDataLayer.DBConnection
         public DbSet<Order> Orders { get; set; }
         public DbSet<User> Users { get; set; }
 
-        // protected override void OnModelCreating(ModelBuilder builder)
-        // {
-        //     base.OnModelCreating(builder);
-        // }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
     }
 }

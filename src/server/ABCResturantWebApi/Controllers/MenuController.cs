@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ABCRestaurantDataLayer.Repository;
-using ABCRestaurantDataLayer.Entitys;
+using ABCRestaurant_Data.Repository;
+using ABCRestaurant_Data.Entitys;
 
 namespace ABCResturantWebApi.Controllers
 {

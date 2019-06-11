@@ -1,13 +1,13 @@
-﻿using ABCRestaurantDataLayer.DBConnection;
-using ABCRestaurantDataLayer.Entitys;
+﻿using ABCRestaurant_Data.DBConnection;
+using ABCRestaurant_Data.Entitys;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ABCRestaurantDataLayer.Repository
+namespace ABCRestaurant_Data.Repository
 {
-    public class MenuRepository : IMenuRepository
+    public class MenuRepository : IMenuRepository 
     {
         private RestaurantDBContext _dBConn;
         public MenuRepository(RestaurantDBContext dBConn)
@@ -15,15 +15,15 @@ namespace ABCRestaurantDataLayer.Repository
             this._dBConn = dBConn;
         }
 
-        public void AddMenu(Menu menu)
+        public void Add(Menu menu)
         {
             _dBConn.Menus.Add(menu);
         }
 
-        public bool DeleteMenuProduct(int Id)
+        public bool Delete(int Id)
         {
             var removed = false;
-            Menu menu = GetMenuProduct(Id);
+            Menu menu = FindById(Id);
 
             if (menu != null)
             {
@@ -34,17 +34,17 @@ namespace ABCRestaurantDataLayer.Repository
             return removed;
         }
 
-        public IEnumerable<Menu> GetAllMenuProducts()
+        public IEnumerable<Menu> List()
         {
             return _dBConn.Menus;
         }
 
-        public Menu GetMenuProduct(int Id)
+        public Menu FindById(int Id)
         {
             return _dBConn.Menus.Where(x => x.MenuID == Id).FirstOrDefault();
         }
 
-        public void UpdateMenuProduct(Menu menu)
+        public void Update(Menu menu)
         {
             _dBConn.Entry(menu).State = EntityState.Modified;
             _dBConn.SaveChanges();
