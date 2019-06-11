@@ -1,0 +1,3 @@
+[submodule "restapp-client"]
+	path = restapp-client
+	url = https://github.com/krishanthkirsh/restapp-client.git
