@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ABCRestaurantDataLayer.Repository
 {
-    interface IMenuRepository
+    public interface IMenuRepository
     {
         void AddMenu(Menu menu);
         Menu GetMenuProduct(int Id);
