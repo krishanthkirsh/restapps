@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ABCRestaurant_Data.Entitys
 {
-    public class Menu :IEntity
+    public class Menu
     {
         [Key]
         public int MenuID { get; set; }

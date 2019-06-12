@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ABCRestaurant_Data.Repository
 {
-    public interface IMenuRepository : IRepository<IEntity>
+    public interface IMenuRepository : IRepository<Menu>
     {
         // void AddMenu(Menu menu);
         // Menu GetMenuProduct(int Id);

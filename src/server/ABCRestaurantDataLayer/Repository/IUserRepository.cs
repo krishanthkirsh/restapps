@@ -1,15 +1,14 @@
 ﻿using ABCRestaurant_Data.Entitys;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ABCRestaurant_Data.Repository
 {
-    public interface IUserRepository
+    public interface IUserRepository : IRepository<User>
     {
-        void AddUser(User user);
-        IEnumerable<User> GetUsers();
-        bool DeleteUser(int userId);
-        User GetUser(int Id);
+        string Getusername();
+        //void AddUser(User user);
+        //IEnumerable<User> GetUsers();
+        //bool DeleteUser(int userId);
+        //User GetUser(int Id);
     }
 }

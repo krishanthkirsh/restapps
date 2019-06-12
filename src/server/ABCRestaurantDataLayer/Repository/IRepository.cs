@@ -1,16 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using ABCRestaurant_Data.Entitys;
+using System.Collections.Generic;
 
 namespace ABCRestaurant_Data.Repository
 {
-    public interface IRepository <T> where T: IEntity
+    public interface IRepository<T>
     {
-        IEnumerable<T> List { get; }
         void Add(T entity);
-        void Delete(T entity);
         void Update(T entity);
+        void Delete(T entity);
+        IEnumerable<T> List();
         T FindById(int Id);
     }
 }
