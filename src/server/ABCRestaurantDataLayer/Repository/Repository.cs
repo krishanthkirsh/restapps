@@ -7,12 +7,11 @@ using System.Linq;
 
 namespace ABCRestaurant_Data.Repository
 {
-    public class Repository<T> : IRepository 
+    public class Repository<T> : IRepository<T> where T: class
     {
-     private RestaurantDBContext _dBConn;
-     internal DbSet<T> dbSet;
-
-
+        private RestaurantDBContext _dBConn;
+        internal DbSet<T> dbSet;
+                
         public Repository(RestaurantDBContext dBConn)
         {
             this._dBConn = dBConn;
